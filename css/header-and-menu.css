@@ -73,7 +73,7 @@
 .content-header {
   display: flex;
   justify-content: space-between;
-  margin: 30px 35px 31px 33px;
+  padding: 30px 35px 31px 33px;
 }
 
 .content-header h4 {
