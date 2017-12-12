@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500');
 
+.w-100 {
+  width: 100%;
+}
+
 .custom-container {
   display: flex;
 }
@@ -62,6 +66,37 @@
 
 .content-col {
   display: flex;
-  background-color: #eeeeee;
+  background-color: #f7f9fa;
   width: 100%;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 35px 31px 33px;
+}
+
+.content-header h4 {
+  margin: 0;
+}
+
+.content-header-nav {
+  color: #bebebe;
+  font-size: 14px;
+}
+
+.content-header-name,
+.content-header-info {
+  display: inline-block;
+}
+
+.content-header-info .img-wrapper {
+  display: inline-block;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.content-header-info {
+  color: #bebebe;
 }
