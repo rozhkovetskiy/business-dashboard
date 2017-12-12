@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  height: 100vh;
+  background-color: #ff9837;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.navbar-logo {
+  font-size: 27px;
+}
+
+.navbar-header__username {
+  font-size: 20px;
+}
