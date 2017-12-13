@@ -57,6 +57,7 @@
   border: 2px solid transparent;
   /*margin: 10px 0;*/
   margin-bottom: 36px;
+  position: relative;
 }
 
 .navbar-body-menu a {
@@ -69,8 +70,21 @@
   margin-right: 10px;
 }
 
-.navbar-body-menu li:hover {
-  border-left: 2px solid #ffffff;
+.navbar-body-menu li:before{
+  content: '';
+  display: none;
+  position: absolute;
+  width: 2px;
+  height: 33px;
+  background-color: #ffffff;
+  top: -7px;
+  left: -19px;
+}
+.navbar-body-menu li:hover:before{
+  display: block;
+}
+.navbar-body-menu li:hover a{
+  color: white;
 }
 
 
