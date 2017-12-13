@@ -24,6 +24,7 @@
   color: #ffffff;
   justify-content: space-between;
   padding-top: 10px;
+  padding-bottom: 25px;
 }
 
 .navbar-header {
@@ -149,4 +150,17 @@
 }
 .navbar-footer{
   color: rgb(250,239,228);
+  padding-left: 30px;
+  position: relative;
+  margin-left: 27px;
+}
+.navbar-footer:before{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:0;
+  left:0;
+  background: url("../img/icons-sprites.png") -7px -85px no-repeat;
 }
