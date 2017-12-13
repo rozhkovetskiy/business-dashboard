@@ -65,11 +65,13 @@
 .warranty table td{
     font-size: 15px;
     color: rgb(127,127,127);
+    padding: 8px 0px 5px 17px;
 }
 .warranty table th{
     font-weight: bold;
     font-size: 14px;
     color: rgb(37,40,40);
+    padding: 18px 0px 15px 11px;
 }
 .accept-btn, .decline-btn{
     border-radius: 3px;
