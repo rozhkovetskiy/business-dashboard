@@ -55,3 +55,49 @@
     justify-content: center;
     align-items: center;
 }
+.warranty table{
+    border: 1px solid #eeebe9;
+}
+.warranty table td, .warranty table th{
+    border: 1px solid #eeebe9;
+    padding-left: 15px;
+}
+.warranty table td{
+    font-size: 15px;
+    color: rgb(127,127,127);
+}
+.warranty table th{
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(37,40,40);
+}
+.accept-btn, .decline-btn{
+    border-radius: 3px;
+    border: 1px solid #35b72f;
+    color: #35b72f;
+    padding: 5px 12px;
+}
+.accept-btn:focus, .decline-btn:focus{
+    background-color: white;
+}
+.decline-btn{
+    border-color: rgb(255,82,82);;
+    color: rgb(255,82,82);
+}
+.accepted{
+    color: #35b72f;
+}
+.declined{
+    color: rgb(255,82,82);
+}
+.view-details{
+    color: rgb(202,199,196);
+    float: right;
+    margin-right: 15px;
+}
+.warranty{
+    padding: 25px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0px 1px 6px rgba(72,79,96,0.04);
+}
