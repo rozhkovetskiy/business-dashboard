@@ -18,6 +18,7 @@
 
 .content-table-item__text {
   color: #7f7f7f;
+  padding-bottom: 9px;
 }
 
 .content-table-item__date {
