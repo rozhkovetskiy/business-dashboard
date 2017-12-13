@@ -23,10 +23,15 @@
   background-color: #ff9837;
   color: #ffffff;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .navbar-header {
-  border-bottom: 1px solid #ffffff;
+  /*border-bottom: 1px solid #ffffff;*/
+}
+.navbar-body{
+  padding-top: 32px;
+  padding-left: 17px;
 }
 .no-margin {
   margin: 0;
@@ -49,11 +54,12 @@
   font-weight: 300;
   font-size: 14px;
   border: 2px solid transparent;
-  margin: 10px 0;
+  /*margin: 10px 0;*/
+  margin-bottom: 36px;
 }
 
 .navbar-body-menu a {
-  color: #ffffff;
+  color: rgb(250,239,228);
 }
 
 .navbar-body-menu .img-wrapper {
@@ -104,4 +110,43 @@
 
 .content-header-info {
   color: #bebebe;
+}
+.navbar-header__avatar{
+ margin-top: 29px;
+  margin-bottom: 17px;
+}
+.navbar-header__avatar img{
+  width:71px;
+}
+.navbar-menu-item a{
+  position: relative;
+  padding-left: 29px;
+}
+.navbar-menu-item a:before{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:0;
+  left:0;
+  background: url("../img/icons-sprites.png") no-repeat;
+}
+.navbar-item-home a:before{
+  background-position:  -11px -50px;
+}
+.navbar-item-man a:before{
+  background-position:  -89px -46px;
+}
+.navbar-item-his a:before{
+  background-position:  -54px -8px;
+}
+.navbar-item-war a:before{
+  background-position:  -47px -48px;
+}
+.navbar-item-prod a:before{
+  background-position:  -10px -9px;
+}
+.navbar-footer{
+  color: rgb(250,239,228);
 }
