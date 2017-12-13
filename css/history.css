@@ -1,0 +1,25 @@
+.content-table {
+  margin-left: 33px;
+  margin-right: 23px;
+  background-color: #ffffff;
+}
+
+.content-table-header {
+  font-size: 17px;
+  padding-top: 25px;
+  padding-left: 23px;
+  padding-right: 42px;
+}
+
+.content-table-item {
+  padding: 21px 42px 21px 23px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.content-table-item__text {
+  color: #7f7f7f;
+}
+
+.content-table-item__date {
+  color: #c4c1c1;
+}
