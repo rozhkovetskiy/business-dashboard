@@ -28,10 +28,11 @@
 }
 
 .navbar-header {
-  /*border-bottom: 1px solid #ffffff;*/
+  border-bottom: 1px solid rgba(250,239,228,0.21);
+  padding-bottom: 14px;
 }
 .navbar-body{
-  padding-top: 32px;
+  padding-top: 17px;
   padding-left: 17px;
 }
 .no-margin {
@@ -163,7 +164,9 @@
   background-position:  -47px -48px;
 }
 .navbar-item-prod a:before{
-  background-position:  -10px -9px;
+  background-position:  -9px -9px;
+  top: -2px;
+  left: -4px;
 }
 .navbar-footer{
   color: rgb(250,239,228);

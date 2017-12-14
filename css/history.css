@@ -6,21 +6,26 @@
 
 .content-table-header {
   font-size: 17px;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-left: 23px;
   padding-right: 42px;
 }
 
 .content-table-item {
-  padding: 21px 42px 21px 23px;
+  padding: 18px 42px 16px 23px;
   border-bottom: 1px solid #f0f0f0;
 }
-
+.content-table-item:first-of-type{
+  padding-bottom: 16px;
+  padding-top: 14px;
+}
 .content-table-item__text {
   color: #7f7f7f;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
 
 .content-table-item__date {
+  font-size: 12px;
   color: #c4c1c1;
 }
