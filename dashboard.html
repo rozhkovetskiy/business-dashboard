@@ -8,6 +8,7 @@
 
 
   <link rel="stylesheet" href="css/header-and-menu.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css" rel="stylesheet">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -88,7 +89,40 @@
           <!--different content-->
           <div class="content-body">
             <div class="row">
-              <!--start here-->
+              <div class="col s8">
+                <div class="line-chart-wrapper">
+                  <div class="line-chart-header">
+                    <h6 class="line-chart-name">Detailed Report</h6>
+                    <div class="line-chart-legend">
+                      <div class="line-chart-legend__circle"></div>
+                      <span class="line-chart-legend__text">Number Of Users</span>
+                    </div>
+                  </div>
+                 <canvas id="lineChart" width="400px" height="170px"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s4">
+                <div class="bar-chart-wrapper">
+                  <h6 class="bar-chart-name">Product Manual</h6>
+                  <div class="bar-chart-legend">
+                    <div class="bar-chart-legend__circle"></div>
+                    <span class="bar-chart-legend__text">Monthly manuals Download</span>
+                  </div>
+                  <canvas id="barChartProduct" width="200px" height="150px"></canvas>
+                </div>
+              </div>
+              <div class="col s4">
+                <div class="bar-chart-wrapper">
+                  <h6 class="bar-chart-name">Warranty</h6>
+                  <div class="bar-chart-legend">
+                    <div class="bar-chart-legend__circle m-blue"></div>
+                    <span class="bar-chart-legend__text">Monthly Warranty Claimed</span>
+                  </div>
+                  <canvas id="barChartWarranty" width="200px" height="150px"></canvas>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -96,13 +130,163 @@
       </div>
     </div>
 
-
-
-
-
-
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/Chart.bundle.js"></script>
+    <script>
+      var ctx = document.getElementById("lineChart");
+      var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG"],
+          datasets: [{
+            label: 'Number Of Users',
+            data: [21000, 21000, 25000, 33000, 33000, 22000, 30000, 22000],
+            fill: false,
+            responsive: true,
+            backgroundColor: 'rgb(255, 153, 51)',
+            borderColor: 'rgb(255, 153, 51)',
+            borderWidth: 3
+          }]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              },
+              gridLines: {
+                drawBorder: false
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false
+              }
+            }]
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        }
+      });
+    </script>
+    <script>
+      var ctxx = document.getElementById("barChartProduct");
+      var barChartProduct = new Chart(ctxx, {
+        type: 'bar',
+        data: {
+          labels: ["JA", "FE", "MA", "AP", "Ma", "JU", "JL", "AU", "SE"],
+          datasets: [{
+            label: 'Monthly manuals Download',
+            data: [1000, 1500, 2500, 1700, 3500, 2800, 3200, 2100, 2800],
+            fill: false,
+            responsive: true,
+            backgroundColor: 'rgb(109, 186, 84)',
+            hoverBackgroundColor: 'rgb(109, 186, 84)',
+            hoverBorderColor: 'rgb(109, 186, 84)',
+            borderColor: 'rgb(109, 186, 84)',
+            borderWidth: 3
+          }]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: false
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                //hide labels
+                display: false,
+                beginAtZero: true
+              },
+              gridLines: {
+                display: false,
+                drawBorder: false
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false
+              },
+              ticks: {
+                fontColor: '#c4c1c1'
+              }
+            }]
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        }
+      });
+    </script>
+    <script>
+      var ctxxx = document.getElementById("barChartWarranty");
+      var barChartWarranty = new Chart(ctxxx, {
+        type: 'bar',
+        data: {
+          labels: ["JA", "FE", "MA", "AP", "Ma", "JU", "JL", "AU", "SE"],
+          datasets: [{
+            label: 'Monthly manuals Download',
+            data: [1000, 1500, 2500, 1700, 3500, 2800, 3200, 2100, 2800],
+            fill: false,
+            responsive: true,
+            backgroundColor: 'rgb(46, 171, 205)',
+            hoverBackgroundColor: 'rgb(46, 171, 205)',
+            hoverBorderColor: 'rgb(46, 171, 205)',
+            borderColor: 'rgb(46, 171, 205)',
+            defaultFontColor: '#c4c1c1',
+            borderWidth: 3
+          }]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: false
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                //hide labels
+                display: false,
+                beginAtZero: true
+              },
+              gridLines: {
+                display: false,
+                drawBorder: false
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false
+              },
+              ticks: {
+                fontColor: '#c4c1c1'
+              }
+            }]
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        }
+      });
+    </script>
 </body>
 </html>
