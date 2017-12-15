@@ -7,8 +7,8 @@
   <link type="text/css" rel="stylesheet" href="css/normalize.css">
 
 
-  <link rel="stylesheet" href="css/header-and-menu.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/header-and-menu.css">
+  <link rel="stylesheet" href="css/dashboard.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -147,7 +147,7 @@
             responsive: true,
             backgroundColor: 'rgb(255, 153, 51)',
             borderColor: 'rgb(255, 153, 51)',
-            borderWidth: 3
+            borderWidth: 3,
           }]
         },
         options: {
@@ -157,7 +157,12 @@
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: false
+                callback: function (tickValue) {
+                  return ((tickValue / 1000) > 1) ? (tickValue/1000 + 'K') : tickValue.toString();
+                },
+                beginAtZero: false,
+                fontColor: '#c4c1c1',
+                padding: 12
               },
               gridLines: {
                 drawBorder: false
@@ -166,6 +171,9 @@
             xAxes: [{
               gridLines: {
                 display: false
+              },
+              ticks: {
+                fontColor: '#c4c1c1'
               }
             }]
           },
