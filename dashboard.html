@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="css/header-and-menu.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/history.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -88,46 +89,74 @@
 
           <!--different content-->
           <div class="content-body">
-            <div class="row">
-              <div class="col s8">
-                <div class="line-chart-wrapper">
-                  <div class="line-chart-header">
-                    <h6 class="line-chart-name">Detailed Report</h6>
-                    <div class="line-chart-legend">
-                      <div class="line-chart-legend__circle"></div>
-                      <span class="line-chart-legend__text">Number Of Users</span>
+            <div class="content-charts">
+              <div class="charts-block">
+                  <div class="line-chart-wrapper">
+                    <div class="line-chart-header">
+                      <h6 class="line-chart-name">Detailed Report</h6>
+                      <div class="line-chart-legend">
+                        <div class="line-chart-legend__circle"></div>
+                        <span class="line-chart-legend__text">Number Of Users</span>
+                      </div>
+                    </div>
+                    <canvas id="lineChart" width="690px" height="259px"></canvas>
+                 </div>
+                <div class="bar-charts">
+                  <div class="bar-chart-wrapper">
+                    <h6 class="bar-chart-name">Product Manual</h6>
+                    <div class="bar-chart-legend">
+                      <div class="bar-chart-legend__circle"></div>
+                      <span class="bar-chart-legend__text">Monthly manuals Download</span>
+                    </div>
+                    <canvas id="barChartProduct" width="346px" height="259px"></canvas>
+                  </div>
+                  <div class="bar-chart-wrapper">
+                    <h6 class="bar-chart-name">Warranty</h6>
+                    <div class="bar-chart-legend">
+                      <div class="bar-chart-legend__circle m-blue"></div>
+                      <span class="bar-chart-legend__text">Monthly Warranty Claimed</span>
+                    </div>
+                    <canvas id="barChartWarranty" width="346px" height="259px"></canvas>
+                  </div>
+                </div>
+                  </div>
+                  <div class="chart-history">
+                    <div class="chart-history-title">
+                      Notification
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">Douglas Gibson claims a warranty of dell inspiron mini</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">You Upload a product manual for apple watch</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">Douglas Gibson claims a warranty of dell inspiron mini</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">You Upload a product manual for apple watch</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">You Upload a product manual for apple watch</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">Douglas Gibson claims a warranty of dell inspiron mini</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
+                    </div>
+                    <div class="content-table-item">
+                      <div class="content-table-item__text">You Upload a product manual for apple watch</div>
+                      <span class="content-table-item__date">Aug 2 2017</span>
                     </div>
                   </div>
-                 <canvas id="lineChart" width="400px" height="170px"></canvas>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s4">
-                <div class="bar-chart-wrapper">
-                  <h6 class="bar-chart-name">Product Manual</h6>
-                  <div class="bar-chart-legend">
-                    <div class="bar-chart-legend__circle"></div>
-                    <span class="bar-chart-legend__text">Monthly manuals Download</span>
-                  </div>
-                  <canvas id="barChartProduct" width="200px" height="150px"></canvas>
-                </div>
-              </div>
-              <div class="col s4">
-                <div class="bar-chart-wrapper">
-                  <h6 class="bar-chart-name">Warranty</h6>
-                  <div class="bar-chart-legend">
-                    <div class="bar-chart-legend__circle m-blue"></div>
-                    <span class="bar-chart-legend__text">Monthly Warranty Claimed</span>
-                  </div>
-                  <canvas id="barChartWarranty" width="200px" height="150px"></canvas>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-
-      </div>
     </div>
 
     <!--Import jQuery before materialize.js-->
