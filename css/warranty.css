@@ -105,6 +105,11 @@
     color: rgb(202,199,196);
     float: right;
     margin-right: 15px;
+    border: none;
+    background-color: transparent;
+}
+.view-details:focus{
+    background-color: transparent;
 }
 .warranty{
     padding: 25px;
@@ -114,4 +119,113 @@
 }
 .warranty .orange-row td{
     color: #ff9737;
+}
+.manual-select{
+    display: block;
+    width: 165px;
+    height: 53px;
+    font-size: 14px;
+    color: #dddddd !important;
+    -webkit-appearance: none;
+    padding-left: 20px;
+}
+
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    margin-top: 35px;
+}
+.file-upload input[type="file"]{
+    display: none;
+}
+.file-upload label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.fila-upload-p{
+    display: inline-block;
+    margin-top: 0px;
+    background: url("../img/img_upload.png") 5px 2px no-repeat;
+    padding-left: 28px;
+}
+.fila-upload-p span{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.8;
+}
+.upload-img{
+    width: 12px;
+    margin-right: 5px;
+}
+.output-image{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin-left: 65px;
+}
+.output-pdf{
+    vertical-align: top;
+    margin-top: 37px;
+}
+.manual-input{
+    display: block;
+    width: 360px !important;
+    height: 53px !important;
+    border: 1px solid #ececee !important;
+    border-radius: 3px !important;
+    margin-bottom: 30px !important;
+    padding-left: 20px !important;
+    font-size: 14px !important;
+    -webkit-appearance: none !important;
+}
+.manual-input:focus{
+    border: 1px solid #26a69a !important;
+    box-shadow: none !important;
+}
+.manual-select{
+    width: 382px;
+}
+.manual-select:after {
+    content: "\f0d7";
+    display: block;
+    position: absolute;
+    font-family: FontAwesome;
+    width: 10px;
+    height: 10px;
+    top: 19px;
+    right: 15px;
+    color: #dddddd;
+}
+.upload-img-block .file-upload{
+    margin-top: 10px;
+}
+
+.warranty-btn {
+    border-radius: 3px;
+    background-color: #ff9737;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    padding: 10px 58px;
+    font-size: 14px;
+}
+.upload-img-block{
+    margin-bottom: 15px;
+}
+.pagination{
+    margin-top: 25px;
+}
+.pagination li.active{
+    background-color: #ff9737;
 }

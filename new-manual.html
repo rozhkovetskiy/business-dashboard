@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+
+
+    <link rel="stylesheet" href="css/header-and-menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/warranty.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+
+<div class="custom-container">
+    <!-- navigation -->
+    <div class="navbar-col">
+
+        <div class="navbar">
+
+            <div class="navbar-wrapper">
+                <div class="navbar-header">
+                    <h4 class="navbar-logo center-align">innstal</h4>
+                    <div class="navbar-header__avatar center-align">
+                        <img src="img/avatar.png" alt="avatar" class="circle responsive-img">
+                    </div>
+                    <h5 class="navbar-header__username center-align">Melissa Johnston</h5>
+                </div>
+                <div class="navbar-body">
+                    <ul class="navbar-body-menu">
+                        <li class="navbar-menu-item navbar-item-home">
+                            <a href="#">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="navbar-menu-item navbar-item-man">
+                            <a href="#">
+                                <span>Product Manuals</span>
+                            </a>
+                        </li>
+                        <li class="navbar-menu-item navbar-item-his">
+                            <a href="#">
+                                <span>History</span>
+                            </a>
+                        </li>
+                        <li class="navbar-menu-item navbar-item-war">
+                            <a href="#">
+                                <span>Warranty</span>
+                            </a>
+                        </li>
+                        <li class="navbar-menu-item navbar-item-prod">
+                            <a href="#">
+                                <span>Your products</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navbar-footer">
+                Logout
+            </div>
+        </div>
+    </div>
+
+    <!-- page content -->
+    <div class="content-col">
+        <div class="w-100 no-margin">
+            <div class="content-header">
+                <div class="content-header-name">
+                    <h4 class="content-header-greetings">
+                        Hello, Melissa Johnston
+                    </h4>
+                    <div class="content-header-nav">
+                        Creat New Manual
+                    </div>
+                </div>
+                <div class="content-header-info">
+                    <div class="img-wrapper">
+                        <img src="img/people-icon.png" alt="people">
+                    </div>
+                    <span >25474 User Registered</span>
+                </div>
+            </div>
+
+            <!--different content-->
+            <div class="content-body">
+                <div class="row">
+                    <div class="searched-manuals">
+                        <div class="new-manual">
+                            <form action="">
+                                <input class="manual-input" type="text" placeholder="Name">
+                                <select class="manual-select" name="country" id="type">
+                                    <option value="" disabled selected>Product Type</option>
+                                </select>
+                                <div>
+                                    <div class="file-upload">
+                                        <label>
+                                            <input type="file" name="file" id="file" accept="application/pdf">
+                                            <p class="fila-upload-p">
+                                                <span>Upload PDF</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <span id="output" class="output-image output-pdf"></span>
+                                </div>
+                                <div class="upload-img-block">
+                                    <div class="file-upload">
+                                        <label>
+                                            <input type="file" name="file" id="file2">
+                                            <p class="fila-upload-p">
+                                                <span>Upload Image</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <span id="output2" class="output-image"></span>
+                                </div>
+                                <button class="warranty-btn">Create New Manual</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    function handleFileSelect(evt) {
+        console.log("123");
+        var file = evt.target.files; // FileList object
+        var f = file[0];
+        // Only process image files.
+        if (evt.target.id == "file2" && !f.type.match('image.*')) {
+            alert("Image only please....");
+        }
+        var reader = new FileReader();
+        // Closure to capture the file information.
+        reader.onload = (function(theFile) {
+            return function(e) {
+                // Render thumbnail.
+                var span = document.createElement('span');
+                if(evt.target.id == "file2") {
+                    span.innerHTML = ['<img class="thumb" title="', escape(theFile.name), '" src="', e.target.result, '" />'].join('');
+                }
+                if( evt.target.id == "file"){
+                    span.innerHTML = theFile.name;
+                }
+                if( evt.target.id == "file"){
+                    document.getElementById('output').insertBefore(span, null);
+                }
+                if( evt.target.id == "file2"){
+                    document.getElementById('output2').insertBefore(span, null);
+                }
+            };
+        })(f);
+        // Read in the image file as a data URL.
+        reader.readAsDataURL(f);
+    }
+    document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    document.getElementById('file2').addEventListener('change', handleFileSelect, false);
+</script>
+</body>
+</html>
